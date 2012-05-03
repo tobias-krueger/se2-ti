@@ -29,7 +29,7 @@ public class Uebung01View extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txt_log = new javax.swing.JTextArea();
         btn_start = new javax.swing.JButton();
         btn_pause = new javax.swing.JButton();
         btn_stop = new javax.swing.JButton();
@@ -55,10 +55,10 @@ public class Uebung01View extends javax.swing.JFrame {
             .add(0, 0, Short.MAX_VALUE)
         );
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setEditable(false);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txt_log.setColumns(20);
+        txt_log.setEditable(false);
+        txt_log.setRows(5);
+        jScrollPane1.setViewportView(txt_log);
 
         btn_start.setText("Start");
         btn_start.addActionListener(new java.awt.event.ActionListener() {
@@ -147,19 +147,19 @@ public class Uebung01View extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_stopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_stopActionPerformed
-        jTextArea1.append("Stop Simulation\n");
+        txt_log.append("Stop Simulation\n");
     }//GEN-LAST:event_btn_stopActionPerformed
 
     private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
-        jTextArea1.append("Start Simulation\n");
+        txt_log.append("Start Simulation\n");
     }//GEN-LAST:event_btn_startActionPerformed
 
     private void btn_pauseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_pauseActionPerformed
-        jTextArea1.append("Pause Simulation\n");
+        txt_log.append("Pause Simulation\n");
     }//GEN-LAST:event_btn_pauseActionPerformed
 
     private void lbl_clearlogMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_clearlogMouseClicked
-        jTextArea1.setText("");
+        txt_log.setText("");
     }//GEN-LAST:event_lbl_clearlogMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -170,7 +170,7 @@ public class Uebung01View extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lbl_clearlog;
+    private javax.swing.JTextArea txt_log;
     // End of variables declaration//GEN-END:variables
 }
