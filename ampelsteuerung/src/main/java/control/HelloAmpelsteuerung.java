@@ -7,7 +7,7 @@ package control;
 public class HelloAmpelsteuerung {
     
    public static void main(String[] args) {
-       System.out.println("Hello Ampelsteuerung!");
+       System.out.println("Hello Ampelsteuerung!!");
    } 
     
 }
