@@ -9,7 +9,7 @@
     <repositories>
         <repository>
             <url>http://repo1.maven.org/maven2/</url>
-            <id>swing-layout</id>
+            <id>wsing-layout</id>
             <layout>default</layout>
             <name>Repository for library Library[swing-layout]</name>
         </repository>
@@ -26,22 +26,35 @@
             <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
+            <version>2.4</version>
             <configuration>
-              <archive>
-                    <manifest>
+              <archive> 
+                   <manifest>
                       <addClasspath>true</addClasspath>
+                      <classpathPrefix>lib/</classpathPrefix>
                       <mainClass>control.HelloAmpelsteuerung</mainClass>
                     </manifest>
               </archive>
             </configuration>
             </plugin>
             <plugin>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <configuration>
-              <descriptorRefs>
-                    <descriptorRef>jar-with-dependencies</descriptorRef>
-              </descriptorRefs>
-            </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
     </plugins>
 </build>
