@@ -5,3 +5,4 @@
 *.war
 *.ear
 /ampelsteuerung/target/
+.DS_Store
