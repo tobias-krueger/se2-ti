@@ -1,5 +1,7 @@
 package control;
 
+import view.Uebung01View;
+
 /**
  *
  * @author kremer
@@ -7,7 +9,9 @@ package control;
 public class HelloAmpelsteuerung {
     
    public static void main(String[] args) {
-       System.out.println("Hello Ampelsteuerung!!");
+       System.out.println("Hello Ampelsteuerung!");
+       Uebung01View view = new Uebung01View();
+       view.setVisible(true);
    } 
     
 }
