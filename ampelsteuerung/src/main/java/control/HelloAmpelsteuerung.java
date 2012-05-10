@@ -1,6 +1,6 @@
 package control;
 
-import view.Uebung01View;
+import view.AmpelsteuerungEinfachView;
 
 /**
  *
@@ -10,7 +10,7 @@ public class HelloAmpelsteuerung {
     
    public static void main(String[] args) {
        System.out.println("Hello Ampelsteuerung!");
-       Uebung01View view = new Uebung01View();
+       AmpelsteuerungEinfachView view = new AmpelsteuerungEinfachView();
        view.setVisible(true);
    } 
     
